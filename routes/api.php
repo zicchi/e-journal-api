@@ -17,5 +17,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/notes', [DailyNoteController::class, 'store']);
     Route::get('/notes/{id}', [DailyNoteController::class, 'show']);
     Route::post('/notes/{id}/media', [DailyNoteController::class, 'uploadMedia']);
-    Route::delete('/logout', [AuthController::class, 'logout']);
+    Route::get('/logout', [AuthController::class, 'logout']);
 });
